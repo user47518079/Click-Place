@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>1 GeoAR.js demo</title>
+    <title>2 GeoAR.js demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
 	<script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
@@ -26,21 +26,14 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 	    
-	<a-entity
-  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0. 1 0. 1 0. 1; to: 0.1 0.1 0.1"
-  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 0.1 0.1 0.1; to: 0.01 0.01 0.01"
-  animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 0.1 0.1 0.1"
-  cursor="fuse: true;"
-  material="color: white; shader: flat"
-  <!--position ="0 0 0"-->
-  geometry="primitive: ring"></a-entity>
+
 
        <a-image 
 	    src="src: url(./map-marker.png)"
-            scale="10 10 10"
+            scale="5 5 5"
 	billboard
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
-	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="1 1 1" position="0 12 0" billboard></a-text>
+	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="2 2 2" position="0 12 0" billboard></a-text>
        </a-image>
 	<a-sphere
             clickhandler
@@ -61,6 +54,14 @@
         </a-ring>
 
         <a-camera gps-camera="maxDistance: 400;" rotation-reader>
+<a-entity
+  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0. 1 0. 1 0. 1; to: 0.1 0.1 0.1"
+  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 0.1 0.1 0.1; to: 0.01 0.01 0.01"
+  animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 0.1 0.1 0.1"
+  cursor="fuse: true;"
+  material="color: white; shader: flat"
+  position ="0 0 0"
+  geometry="primitive: ring"></a-entity>
 		</a-camera>
 	</a-scene>
 </body>
