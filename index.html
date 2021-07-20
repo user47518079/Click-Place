@@ -30,8 +30,8 @@
             material="color: blue;"
             scale="0.8 0.8 0.8"
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
-		<a-text id="cylinderText" value="This is a box" align="center" color="#FFF" visible="true" position="0 3 0"
-             material="color: blue"></a-text>
+		<a-text id="cylinderText" value="This is a box" align="center" color="#FFF" visible="true" position="0 2 0"
+             geometry="primitive: plane; width: 4" material="color: blue"></a-text>
         </a-box>
 	<a-sphere
             clickhandler
@@ -39,12 +39,13 @@
             scale="1 1 1"
             gps-entity-place="latitude: -33.979559; longitude: 151.054312;">
         </a-sphere> 
-	<a-box
+	<a-ring
             clickhandler
             material="color: yellow;"
             scale="1 1 1"
             gps-entity-place="latitude: -33.979189; longitude: 151.054018;">
-        </a-box>
+	<a-animation attribute="rotation" from="0 0 0" to="360 180 0" dur="2000" direction="alternate"></a-animation>
+        </a-ring>
 
         <a-camera gps-camera="maxDistance: 400;" rotation-reader>
 		</a-camera>
