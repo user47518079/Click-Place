@@ -25,13 +25,12 @@
 		embedded
 		arjs='sourceType: webcam; debugUIEnabled: false;'>
 
-        <a-box
-            clickhandler
-            material="color: blue;"
+        <a-entity 
+            material="src: url(./map-marker.png)"
             scale="0.8 0.8 0.8"
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
-		<a-animation attribute="rotation" from="0 0 0" to="360 180 0" dur="2000" direction="alternate" repeat="indefinite"></a-animation>
-        </a-box>
+		<a-animation attribute="position" from="0 0.5 -3" to="0 3 -2" direction="alternate" repeat="indefinite"></a-animation>
+        </a-entity>
 	<a-sphere
             clickhandler
             material="color: green;"
@@ -41,7 +40,9 @@
 	<a-ring
             clickhandler
             material="color: yellow;"
-            scale="1 1 1"
+            radius-inner="0.25" 
+		radius-outer="1.0"
+		scale="1 1 1"		
             gps-entity-place="latitude: -33.979189; longitude: 151.054018;">
 		<a-text id="cylinderText" value="This is a box" align="center" color="blue" visible="true" position="0 2.5 0"</a-text>
         </a-ring>
