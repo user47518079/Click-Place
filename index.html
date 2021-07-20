@@ -20,7 +20,7 @@
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
-        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+        cursor= 'fuse: true; fuseTimeout: 0;'
         raycaster="objects: [clickhandler];"
         vr-mode-ui="enabled: false"
 		embedded
@@ -31,6 +31,7 @@
             scale="10 10 10"
 	billboard
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
+	       <a-text id="tree1" value="This is a Gum Tree" align="center" color="Pink" visible="true" scale="2 2 2 position="0 2.5 0" billboard></a-text>
        </a-image>
 	<a-sphere
             clickhandler
