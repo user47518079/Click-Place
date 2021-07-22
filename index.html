@@ -42,6 +42,7 @@
             gps-entity-place="latitude: -33.979559; longitude: 151.054312;"> 
 		<a-animation attribute="position" from= "0 0 0" to="0 3 -2" direction="alternate" begin="click" repeat="indefinite"></a-animation>
         </a-sphere> 
+	    
 	<a-ring
             clickhandler
             material="color: yellow;"
@@ -51,8 +52,9 @@
             gps-entity-place="latitude: -33.979189; longitude: 151.054018;">
 		<a-text id="cylinderText" value="This is a box" align="center" color="blue" visible="true" position="0 2.5 0" billboard></a-text>
         </a-ring>
+	    
 	    <a-gltf-model 
-	    src="src: url(./tree1.glb)"
+	    src="src: url(./assets/Robs_tree2.glb)"
             scale="2 2 2"
               gps-entity-place="latitude: -33.979431; longitude: 151.054563;">
 	       <a-text id="treeTwo" value="This is a Not a Gum Tree" align="center" color="teal" visible="true" scale="1.3 1.3 1.3" position="0 -2.5 0" billboard></a-text>
