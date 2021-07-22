@@ -33,14 +33,14 @@
             scale="5 5 5"
 	billboard
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
-	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="2 2 2" position="0 0 0" billboard></a-text>
+	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="1.5 1.5 1.5" position="0 1.5 0" billboard></a-text>
        </a-image>
 	<a-sphere
             clickhandler
             material="color: green;"
             scale="1 1 1"
             gps-entity-place="latitude: -33.979559; longitude: 151.054312;"> 
-		<a-animation attribute="position" from= "0 0 0" to="0 3 -2" direction="alternate" begin="mouseenter" end="mouseleave" repeat="indefinite"></a-animation>
+		<a-animation attribute="position" from= "0 0 0" to="0 3 -2" direction="alternate" begin=clickhandler end="mouseleave" repeat="indefinite"></a-animation>
         </a-sphere> 
 	<a-ring
             clickhandler
@@ -55,12 +55,12 @@
 	
         <a-camera gps-camera="maxDistance: 400;" rotation-reader>
 		<a-cursor
-  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.5 0.5 0.5; to: 1.5 1.5 1.5"
-  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 150; from: 1.5 1.5 1.5; to: 0.5 0.5 0.5"
+  animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 500; from: 0.5 0.5 0.5; to: 1.5 1.5 1.5"
+  animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 10; from: 1.5 1.5 1.5; to: 0.5 0.5 0.5"
   animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1.5 1.5 1.5"
   fuse="true;"
   material="color: #11d8c4; shader: flat"
-  position="0 0 -3"
+  position="0 0 -2"
   geometry="primitive: ring">
 		</a-cursor>
 	</a-camera>
