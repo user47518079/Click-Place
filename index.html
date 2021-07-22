@@ -33,14 +33,13 @@
             scale="5 5 5"
 	billboard
             gps-entity-place="latitude: -33.979392; longitude: 151.054641;">
-	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="2 2 2" position="0 0 0" billboard></a-text>
+	       <a-text id="treeOne" value="This is a Gum Tree" align="center" color="teal" visible="true" scale="2 2 2" position="0 0.5 0" billboard></a-text>
        </a-image>
 	<a-sphere
-		  <a-animation attribute="position" from= "0 0 0" to="0 3 -2" direction="alternate" repeat="indefinite"></a-animation>
             clickhandler
             material="color: green;"
             scale="1 1 1"
-            gps-entity-place="latitude: -33.979559; longitude: 151.054312;">
+            gps-entity-place="latitude: -33.979559; longitude: 151.054312;"> <a-animation attribute="position" from= "0 0 0" to="0 3 -2" direction="alternate" repeat="indefinite"></a-animation>
         </a-sphere> 
 	<a-ring
             clickhandler
@@ -54,6 +53,8 @@
 
 	
         <a-camera gps-camera="maxDistance: 400;" rotation-reader>
+		<a-cursor position="0 0 -3" geometry="primitive: ring; radiusOuter: 0.030; radiusInner: 0.020;" material="color: #11d8c4; shader: flat" fuse="true" timeout="10">
+      </a-cursor>
 	</a-camera>
 </a-scene>
 </body>
